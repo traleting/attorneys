@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dlaminiattorneys.co.za/sitemap.xml
