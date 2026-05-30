@@ -4,18 +4,18 @@ import { useInView } from '../hooks/useInView';
 const highlights = [
   {
     icon: Award,
-    title: 'Admitted to the High Court',
-    desc: 'Fully admitted attorney of the High Court of South Africa, with expertise across multiple practice areas.',
+    title: 'Direct Partner Involvement',
+    desc: 'Clients receive direct access to the firm\'s partner and senior legal professionals throughout their matters.',
   },
   {
     icon: BookOpen,
-    title: 'Continuous Legal Education',
-    desc: 'Committed to staying at the forefront of South African law through ongoing professional development.',
+    title: 'Practical Legal Strategy',
+    desc: 'Advice is tailored to each client\'s facts, risks and desired outcomes rather than a one-size-fits-all model.',
   },
   {
     icon: Users,
-    title: 'Community-Centred Approach',
-    desc: 'Deeply rooted in the South African community, providing legal services that are accessible to all.',
+    title: 'National Service Footprint',
+    desc: 'The firm serves clients from its Johannesburg anchor office with Durban satellite support through associate partnerships.',
   },
 ];
 
@@ -26,7 +26,6 @@ export default function About() {
     <section id="about" className="py-24 bg-slate-50" aria-labelledby="about-heading">
       <div ref={ref} className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image */}
           <div
             className={`relative transition-all duration-700 ${
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
@@ -35,33 +34,32 @@ export default function About() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=800&h=900&fit=crop"
-                alt="Attorney Thabo Dlamini - South African Law Firm"
+                alt="Ishmael Mbanjwa - South African law firm founder"
                 className="w-full h-[540px] object-cover"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent" />
             </div>
 
-            {/* Floating card */}
-            <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-5 shadow-2xl border border-slate-100 max-w-[220px]">
+            <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-5 shadow-2xl border border-slate-100 max-w-[240px]">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center">
                   <Award size={18} className="text-gold-600" />
                 </div>
                 <div>
-                  <div className="font-serif font-semibold text-navy-800 text-sm">LLB Hons</div>
-                  <div className="text-slate-500 text-xs">University of Pretoria</div>
+                  <div className="font-serif font-semibold text-navy-800 text-sm">Ishmael Mbanjwa</div>
+                  <div className="text-slate-500 text-xs">Partner & Director</div>
                 </div>
               </div>
               <div className="h-px bg-slate-100 my-2" />
-              <p className="text-xs text-slate-500">Admitted Attorney, Notary & Conveyancer</p>
+              <p className="text-xs text-slate-500">
+                Employment law, CCMA, bargaining council and Labour Court matters
+              </p>
             </div>
 
-            {/* Accent bar */}
             <div className="absolute -left-4 top-12 bottom-12 w-1 bg-gold-500 rounded-full" />
           </div>
 
-          {/* Text */}
           <div
             className={`transition-all duration-700 delay-200 ${
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
@@ -74,13 +72,13 @@ export default function About() {
               id="about-heading"
               className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 leading-tight mb-6"
             >
-              A New Standard of Legal Excellence in South Africa
+              Bespoke Legal Services Built Around Your Matter
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed mb-5">
-              Dlamini Attorneys Inc. was founded on a simple but powerful belief: every South African deserves access to quality legal representation — regardless of their background or circumstances.
+              Mbanjwa & Associates was founded in 2026 by Ishmael Mbanjwa, the firm's Partner and Director, to provide accessible, practical and tailored legal services to individuals, businesses and organisations.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
-              Led by Attorney Thabo Dlamini, our firm brings a fresh, client-first approach to the South African legal landscape. We combine deep legal knowledge with genuine care for our clients, ensuring you are informed, supported, and powerfully represented at every step.
+              With an anchor office in Johannesburg and satellite support in Durban through associate partnerships, the firm serves clients across South Africa with responsive support, clear communication and direct senior-level engagement.
             </p>
 
             <div className="space-y-5">

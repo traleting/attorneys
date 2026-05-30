@@ -1,36 +1,36 @@
-import { CheckCircle2, Clock, DollarSign, MessageSquare, Globe, Handshake } from 'lucide-react';
+import { CheckCircle2, Clock, FileText, Globe, Handshake, MessageSquare } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const reasons = [
   {
-    icon: DollarSign,
-    title: 'Transparent, Fair Pricing',
-    desc: 'No hidden fees. We provide clear fee arrangements upfront so you know exactly what to expect from the start.',
-  },
-  {
-    icon: Clock,
-    title: 'Responsive Communication',
-    desc: 'We return calls and emails promptly. You will never be left wondering about your matter\'s status.',
-  },
-  {
-    icon: Globe,
-    title: 'Multilingual Service',
-    desc: 'We serve clients in English, Zulu, Sotho, and Afrikaans — making legal services truly accessible to all South Africans.',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Plain-Language Advice',
-    desc: 'We explain the law in clear, simple terms. No legal jargon — just honest, straightforward guidance you can act on.',
-  },
-  {
     icon: Handshake,
-    title: 'Personal Attention',
-    desc: 'Your matter is handled by an admitted attorney, not delegated to clerks. You always deal directly with your lawyer.',
+    title: 'Direct Access to Senior Professionals',
+    desc: 'Clients work directly with the firm\'s partner and senior legal professionals, creating accountability and clear communication.',
+  },
+  {
+    icon: FileText,
+    title: 'Tailored Legal Services',
+    desc: 'Every matter is considered on its own facts, risks and objectives so the legal strategy fits the client\'s real situation.',
   },
   {
     icon: CheckCircle2,
-    title: 'Proven Track Record',
-    desc: 'A growing portfolio of successful outcomes in courts and tribunals across South Africa speaks for itself.',
+    title: 'Employment Law Experience',
+    desc: 'The firm assists with CCMA, bargaining council, Labour Court and disciplinary hearing matters.',
+  },
+  {
+    icon: MessageSquare,
+    title: 'Clear Communication',
+    desc: 'Clients can expect practical advice, responsive updates and a professional relationship built on trust and confidentiality.',
+  },
+  {
+    icon: Globe,
+    title: 'National Footprint',
+    desc: 'Johannesburg-based service is supported by associate partnerships, including satellite support in Durban.',
+  },
+  {
+    icon: Clock,
+    title: 'Responsive Support',
+    desc: 'The firm is structured to provide efficient legal support to individuals, businesses and organisations across South Africa.',
   },
 ];
 
@@ -39,14 +39,12 @@ export default function WhyUs() {
 
   return (
     <section id="why-us" className="py-24 bg-navy-950 relative overflow-hidden" aria-labelledby="whyus-heading">
-      {/* Decorative */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-400 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-gold-400 rounded-full blur-3xl" />
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div
           className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
@@ -59,14 +57,13 @@ export default function WhyUs() {
             id="whyus-heading"
             className="font-serif text-4xl lg:text-5xl font-bold text-white leading-tight mb-5"
           >
-            The Right Attorney Makes All the Difference
+            Practical, Accessible and Client-Focused Legal Service
           </h2>
           <p className="text-slate-400 text-lg">
-            We are a new kind of South African law firm — one that puts your needs first, every single time.
+            Mbanjwa & Associates combines technical legal experience with a practical understanding of the sectors in which clients operate.
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
           {reasons.map(({ icon: Icon, title, desc }, i) => (
             <div
@@ -85,7 +82,6 @@ export default function WhyUs() {
           ))}
         </div>
 
-        {/* CTA Banner */}
         <div
           className={`mt-16 bg-gradient-to-r from-gold-600 to-gold-500 rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-6 transition-all duration-700 delay-500 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
@@ -96,7 +92,7 @@ export default function WhyUs() {
               Ready to Discuss Your Matter?
             </h3>
             <p className="text-navy-800">
-              Schedule a confidential consultation — no obligation, no pressure.
+              Schedule a confidential consultation with a firm built around direct partner involvement.
             </p>
           </div>
           <a

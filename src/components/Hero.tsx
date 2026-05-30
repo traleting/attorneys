@@ -37,7 +37,7 @@ export default function Hero() {
           >
             <Shield size={14} className="text-gold-400" />
             <span className="text-gold-400 text-xs font-semibold tracking-widest uppercase">
-              Admitted Attorney of the High Court of South Africa
+              Employment Law | Civil Litigation | Family Law
             </span>
           </div>
 
@@ -46,8 +46,8 @@ export default function Hero() {
               inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            Justice You Can
-            <span className="block text-gold-400">Afford to Trust</span>
+            Practical Legal
+            <span className="block text-gold-400">Solutions for You</span>
           </h1>
 
           <p
@@ -55,7 +55,7 @@ export default function Hero() {
               inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            A new-generation South African law firm committed to delivering expert, accessible, and client-centred legal services — for every South African who deserves the best representation.
+            Mbanjwa & Associates is a bespoke South African law firm providing accessible, practical and tailored legal services to individuals, businesses and organisations.
           </p>
 
           <div
@@ -71,11 +71,11 @@ export default function Hero() {
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="tel:+27110000000"
+              href="tel:+27733922678"
               className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-gold-400 text-white hover:text-gold-400 font-semibold px-7 py-4 rounded transition-all duration-200"
             >
               <Phone size={18} />
-              +27 11 000 0000
+              +27 73 392 2678
             </a>
           </div>
 
@@ -86,8 +86,8 @@ export default function Hero() {
             }`}
           >
             {[
-              { value: '5+', label: 'Years Experience' },
-              { value: '200+', label: 'Cases Won' },
+              { value: '2026', label: 'Founded' },
+              { value: '2', label: 'Regional Footprint' },
               { value: '100%', label: 'Client Focus' },
             ].map((s) => (
               <div key={s.label}>
@@ -110,12 +110,12 @@ export default function Hero() {
             </h2>
             <ul className="space-y-4">
               {[
-                'Family Law & Divorce',
-                'Property Law & Conveyancing',
-                'Labour & Employment Law',
-                'Criminal Defence',
-                'Business & Contract Law',
-                'Personal Injury & Damages',
+                'Employment Law & Labour Relations',
+                'Civil Litigation',
+                'Family Law',
+                'Property & Conveyancing Support',
+                'Disciplinary Hearings',
+                'Commercially Practical Legal Advice',
               ].map((area) => (
                 <li key={area} className="flex items-center gap-3 text-slate-300">
                   <span className="w-1.5 h-1.5 rounded-full bg-gold-400 flex-shrink-0" />

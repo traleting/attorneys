@@ -3,12 +3,12 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const practiceAreas = [
-  'Family Law & Divorce',
-  'Property Law & Conveyancing',
-  'Labour & Employment Law',
-  'Criminal Defence',
-  'Business & Company Law',
-  'Wills & Deceased Estates',
+  'Employment Law & Labour Relations',
+  'Civil Litigation',
+  'Family Law',
+  'Property & Conveyancing Support',
+  'Disciplinary Hearings',
+  'Industry-Focused Legal Support',
   'Other',
 ];
 
@@ -78,7 +78,7 @@ export default function Contact() {
             Book Your Free Consultation
           </h2>
           <p className="text-slate-500 text-lg">
-            Your first consultation is free and confidential. Tell us about your matter and we will get back to you within 24 hours.
+            Tell us about your matter and we will respond with practical next steps.
           </p>
         </div>
 
@@ -99,7 +99,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-medium text-white text-sm mb-1">Office Address</div>
-                    <div className="text-slate-400 text-sm">123 Commissioner Street<br />Johannesburg CBD, 2001<br />Gauteng, South Africa</div>
+                    <div className="text-slate-400 text-sm">Anchor Office: Johannesburg, South Africa<br />Satellite Presence: Durban, through associate partnerships</div>
                   </div>
                 </li>
 
@@ -109,14 +109,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-medium text-white text-sm mb-1">Phone</div>
-                    <a href="tel:+27110000000" className="text-slate-400 hover:text-gold-400 text-sm transition-colors">
-                      +27 11 000 0000
+                    <a href="tel:+27733922678" className="text-slate-400 hover:text-gold-400 text-sm transition-colors">
+                      +27 73 392 2678
                     </a>
-                    <div className="mt-1">
-                      <a href="tel:+27800000000" className="text-slate-400 hover:text-gold-400 text-sm transition-colors">
-                        +27 80 000 0000 (WhatsApp)
-                      </a>
-                    </div>
                   </div>
                 </li>
 
@@ -126,8 +121,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-medium text-white text-sm mb-1">Email</div>
-                    <a href="mailto:info@dlaminiattorneys.co.za" className="text-slate-400 hover:text-gold-400 text-sm transition-colors">
-                      info@dlaminiattorneys.co.za
+                    <a href="mailto:admin@mbanjwassociates.co.za" className="text-slate-400 hover:text-gold-400 text-sm transition-colors">
+                      admin@mbanjwassociates.co.za
                     </a>
                   </div>
                 </li>
@@ -145,7 +140,7 @@ export default function Contact() {
 
               <div className="mt-10 pt-8 border-t border-white/10">
                 <p className="text-slate-400 text-xs leading-relaxed">
-                  Dlamini Attorneys Inc. is registered with the Law Society of South Africa and adheres to all rules of professional conduct. All consultations are strictly confidential.
+                  Mbanjwa & Associates provides direct senior-level engagement and tailored legal support. All consultations are treated as confidential.
                 </p>
               </div>
             </div>
@@ -166,7 +161,7 @@ export default function Contact() {
                   Message Received
                 </h3>
                 <p className="text-slate-500 max-w-sm">
-                  Thank you for contacting Dlamini Attorneys. We will review your matter and get back to you within 24 hours.
+                  Thank you for contacting Mbanjwa & Associates. We will review your matter and respond with practical next steps.
                 </p>
               </div>
             ) : (

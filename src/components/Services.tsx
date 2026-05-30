@@ -1,42 +1,42 @@
-import { Heart, Home, Briefcase, Shield, Building2, FileText, ArrowRight } from 'lucide-react';
+import { ArrowRight, Briefcase, Building2, FileText, Heart, Home, Scale } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const services = [
   {
+    icon: Briefcase,
+    title: 'Employment Law & Labour Relations',
+    desc: 'Representation at the CCMA, bargaining councils and the Labour Court, supported by strategic employment-law risk advice.',
+    tags: ['CCMA', 'Bargaining Councils', 'Labour Court', 'Risk Advice'],
+  },
+  {
+    icon: Scale,
+    title: 'Civil Litigation',
+    desc: 'Litigation support in Magistrates\' Court and High Court matters, from early dispute assessment to pleadings, hearings and settlement negotiations.',
+    tags: ['Magistrates\' Court', 'High Court', 'Pleadings', 'Settlements'],
+  },
+  {
     icon: Heart,
-    title: 'Family Law & Divorce',
-    desc: 'Compassionate guidance through divorce, child custody, maintenance, and domestic partnerships under South African family law.',
-    tags: ['Divorce', 'Child Custody', 'Maintenance', 'Adoption'],
+    title: 'Family Law',
+    desc: 'Responsive legal support for family-related matters, with practical guidance and clear communication throughout the process.',
+    tags: ['Family Matters', 'Advice', 'Negotiation', 'Support'],
   },
   {
     icon: Home,
-    title: 'Property Law & Conveyancing',
-    desc: 'Expert conveyancing services for buying, selling, and transferring property across South Africa. Protecting your investment.',
-    tags: ['Transfers', 'Bonds', 'Sectional Title', 'Evictions'],
-  },
-  {
-    icon: Briefcase,
-    title: 'Labour & Employment Law',
-    desc: 'Protecting workers and employers at the CCMA and Labour Court. Unfair dismissals, retrenchments, and employment contracts.',
-    tags: ['CCMA', 'Unfair Dismissal', 'Retrenchment', 'Contracts'],
-  },
-  {
-    icon: Shield,
-    title: 'Criminal Defence',
-    desc: 'Vigorous defence in the Magistrate\'s Court and High Court. We protect your rights at every stage of criminal proceedings.',
-    tags: ['Bail Applications', 'Trial Defence', 'Appeals', 'Expungement'],
-  },
-  {
-    icon: Building2,
-    title: 'Business & Company Law',
-    desc: 'From business registration to shareholder disputes. We help South African entrepreneurs build solid legal foundations.',
-    tags: ['Company Formation', 'Contracts', 'Disputes', 'CIPC'],
+    title: 'Property & Conveyancing Support',
+    desc: 'Conveyancing services and support on property-related transfer matters as part of a coordinated legal-service offering.',
+    tags: ['Transfers', 'Property Matters', 'Conveyancing', 'Coordination'],
   },
   {
     icon: FileText,
-    title: 'Wills & Deceased Estates',
-    desc: 'Drafting valid wills and administering deceased estates to ensure your assets are protected and your wishes honoured.',
-    tags: ['Will Drafting', 'Estate Administration', 'Intestate', 'Trusts'],
+    title: 'Disciplinary Hearings',
+    desc: 'Chairing and managing individual, collective and reportable employment-related hearings with procedural care.',
+    tags: ['Hearings', 'Discipline', 'Reports', 'Procedure'],
+  },
+  {
+    icon: Building2,
+    title: 'Industry-Focused Legal Support',
+    desc: 'Practical legal assistance for clients in mining, metals, motor, road freight, financial services and security sectors.',
+    tags: ['Mining', 'Road Freight', 'Financial Services', 'Security'],
   },
 ];
 
@@ -46,27 +46,25 @@ export default function Services() {
   return (
     <section id="services" className="py-24 bg-white" aria-labelledby="services-heading">
       <div ref={ref} className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div
           className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
           <p className="text-gold-600 font-semibold text-sm tracking-widest uppercase mb-3">
-            Our Practice Areas
+            Services & Practice Areas
           </p>
           <h2
             id="services-heading"
             className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 leading-tight mb-5"
           >
-            Comprehensive Legal Services for South Africans
+            Tailored Legal Support Across Key Practice Areas
           </h2>
           <p className="text-slate-500 text-lg">
-            From personal matters to complex business disputes, we provide expert legal guidance across the full spectrum of South African law.
+            We combine technical legal experience with practical understanding of the sectors in which our clients operate.
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
           {services.map(({ icon: Icon, title, desc, tags }, i) => (
             <article

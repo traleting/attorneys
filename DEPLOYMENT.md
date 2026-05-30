@@ -17,11 +17,11 @@ Add these environment variables in Vercel:
 
 ```env
 RESEND_API_KEY=re_your_resend_api_key
-CONTACT_TO_EMAIL=info@dlaminiattorneys.co.za
-CONTACT_FROM_EMAIL=Dlamini Attorneys <website@dlaminiattorneys.co.za>
+CONTACT_TO_EMAIL=admin@mbanjwassociates.co.za
+CONTACT_FROM_EMAIL=Mbanjwa & Associates <website@mbanjwassociates.co.za>
 ```
 
-Important: `CONTACT_FROM_EMAIL` must use a sender/domain verified in Resend. For quick testing, Resend allows `Dlamini Attorneys <onboarding@resend.dev>`, but production should use the firm's verified domain.
+Important: `CONTACT_FROM_EMAIL` must use a sender/domain verified in Resend. For quick testing, Resend allows `Mbanjwa & Associates <onboarding@resend.dev>`, but production should use the firm's verified domain.
 
 ## Deploy Steps
 

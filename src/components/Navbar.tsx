@@ -6,7 +6,7 @@ const links = [
   { label: 'About', href: '#about' },
   { label: 'Practice Areas', href: '#services' },
   { label: 'Why Us', href: '#why-us' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Clients', href: '#clients' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -28,13 +28,13 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 group" aria-label="Dlamini Attorneys Home">
+        <a href="#home" className="flex items-center gap-3 group" aria-label="Mbanjwa & Associates Home">
           <div className="w-9 h-9 rounded-full bg-gold-500 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-400 transition-colors">
             <Scale size={18} className="text-navy-950" />
           </div>
           <div className="leading-tight">
-            <div className="font-serif text-white font-semibold text-lg tracking-wide">Dlamini Attorneys</div>
-            <div className="text-gold-400 text-xs font-sans tracking-widest uppercase">Incorporated</div>
+            <div className="font-serif text-white font-semibold text-lg tracking-wide">Mbanjwa & Associates</div>
+            <div className="text-gold-400 text-xs font-sans tracking-widest uppercase">Legal Services</div>
           </div>
         </a>
 

@@ -27,8 +27,8 @@ function clean(value: unknown) {
 
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.CONTACT_TO_EMAIL || 'info@dlaminiattorneys.co.za';
-  const fromEmail = process.env.CONTACT_FROM_EMAIL || 'Dlamini Attorneys <onboarding@resend.dev>';
+  const toEmail = process.env.CONTACT_TO_EMAIL || 'admin@mbanjwassociates.co.za';
+  const fromEmail = process.env.CONTACT_FROM_EMAIL || 'Mbanjwa & Associates <onboarding@resend.dev>';
 
   if (!apiKey) {
     return jsonResponse(
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
   }
 
   const text = [
-    'New consultation request from the Dlamini Attorneys website.',
+    'New consultation request from the Mbanjwa & Associates website.',
     '',
     `Name: ${name}`,
     `Email: ${email}`,
