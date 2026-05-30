@@ -1,13 +1,11 @@
-import { Building2, Factory, Landmark, ShieldCheck, Truck, Wrench } from 'lucide-react';
+import { Building2, Car, PackageCheck, Ship, Truck } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
-const clientGroups = [
-  { icon: Factory, title: 'Mining Sector Clients' },
-  { icon: Wrench, title: 'Metal Industry Clients' },
-  { icon: Wrench, title: 'Motor Industry Clients' },
-  { icon: Truck, title: 'Road Freight Clients' },
-  { icon: Landmark, title: 'Financial Services Clients' },
-  { icon: ShieldCheck, title: 'Security Sector Clients' },
+const clients = [
+  { icon: Truck, name: 'Bakers Transport', sector: 'Road freight and logistics' },
+  { icon: PackageCheck, name: 'DHL Supply Chain', sector: 'Supply chain and logistics' },
+  { icon: Car, name: 'Combined Motor Holdings Group', sector: 'Motor industry' },
+  { icon: Ship, name: 'Bidvest SACD', sector: 'Freight, warehousing and logistics' },
 ];
 
 export default function Clients() {
@@ -32,17 +30,17 @@ export default function Clients() {
             id="clients-heading"
             className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 leading-tight mb-5"
           >
-            Organisations and Sectors We Support
+            Companies the Firm Works With
           </h2>
           <p className="text-slate-500 text-lg">
-            Mbanjwa & Associates has represented clients across industries that require responsive, commercially sensible legal support.
+            Mbanjwa & Associates supports clients operating in sectors that require responsive, commercially sensible legal guidance.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
-          {clientGroups.map(({ icon: Icon, title }, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          {clients.map(({ icon: Icon, name, sector }, i) => (
             <article
-              key={title}
+              key={name}
               className={`bg-white border border-slate-100 rounded-2xl p-7 shadow-lg shadow-slate-200/40 transition-all duration-700 ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
@@ -51,9 +49,9 @@ export default function Clients() {
               <div className="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center mb-5">
                 <Icon size={22} className="text-gold-600" />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-navy-900">{title}</h3>
+              <h3 className="font-serif text-xl font-semibold text-navy-900">{name}</h3>
               <p className="text-slate-500 text-sm leading-relaxed mt-3">
-                Company names can be added here once approved by the client.
+                {sector}
               </p>
             </article>
           ))}
