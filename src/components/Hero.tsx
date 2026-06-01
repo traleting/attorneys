@@ -67,7 +67,7 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-7 py-4 rounded transition-all duration-200 shadow-xl hover:shadow-gold-500/40 group"
             >
-              Book a Free Consultation
+              Book a Consultation
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a

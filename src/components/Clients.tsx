@@ -2,7 +2,12 @@ import { Building2, Ship, Truck } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const clients = [
-  { icon: Truck, name: 'Bakers Transport', sector: 'Road freight and logistics' },
+  {
+    icon: Truck,
+    name: 'Bakers Transport',
+    sector: 'Road freight and logistics',
+    logoSrc: '/client-logos/bakers-transport.webp',
+  },
   {
     icon: Truck,
     name: 'DHL Supply Chain',
@@ -14,6 +19,18 @@ const clients = [
     name: 'Opsicol Group',
     sector: 'Industrial and operational support',
     logoSrc: '/client-logos/opsicol-group.webp',
+  },
+  {
+    icon: Truck,
+    name: 'Manline',
+    sector: 'Transport and logistics',
+    logoSrc: '/client-logos/manline.webp',
+  },
+  {
+    icon: Building2,
+    name: 'Timber24',
+    sector: 'Timber and supply operations',
+    logoSrc: '/client-logos/timber24.webp',
   },
   { icon: Ship, name: 'Bidvest SACD', sector: 'Freight, warehousing and logistics' },
 ];
@@ -47,7 +64,7 @@ export default function Clients() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
           {clients.map((client, i) => {
             const { icon: Icon, name, sector } = client;
 

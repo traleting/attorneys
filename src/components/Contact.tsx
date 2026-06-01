@@ -75,7 +75,7 @@ export default function Contact() {
             id="contact-heading"
             className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 leading-tight mb-5"
           >
-            Book Your Free Consultation
+            Book Your Consultation
           </h2>
           <p className="text-slate-500 text-lg">
             Tell us about your matter and we will respond with practical next steps.
