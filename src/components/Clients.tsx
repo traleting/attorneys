@@ -1,10 +1,20 @@
-import { Building2, Car, PackageCheck, Ship, Truck } from 'lucide-react';
+import { Building2, Ship, Truck } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const clients = [
   { icon: Truck, name: 'Bakers Transport', sector: 'Road freight and logistics' },
-  { icon: PackageCheck, name: 'DHL Supply Chain', sector: 'Supply chain and logistics' },
-  { icon: Car, name: 'Combined Motor Holdings Group', sector: 'Motor industry' },
+  {
+    icon: Truck,
+    name: 'DHL Supply Chain',
+    sector: 'Supply chain and logistics',
+    logoSrc: '/client-logos/dhl-supply-chain.webp',
+  },
+  {
+    icon: Building2,
+    name: 'Opsicol Group',
+    sector: 'Industrial and operational support',
+    logoSrc: '/client-logos/opsicol-group.webp',
+  },
   { icon: Ship, name: 'Bidvest SACD', sector: 'Freight, warehousing and logistics' },
 ];
 
@@ -38,7 +48,10 @@ export default function Clients() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
-          {clients.map(({ icon: Icon, name, sector }, i) => (
+          {clients.map((client, i) => {
+            const { icon: Icon, name, sector } = client;
+
+            return (
             <article
               key={name}
               className={`bg-white border border-slate-100 rounded-2xl p-7 shadow-lg shadow-slate-200/40 transition-all duration-700 ${
@@ -46,15 +59,27 @@ export default function Clients() {
               }`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center mb-5">
-                <Icon size={22} className="text-gold-600" />
+              <div className="h-20 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-5 overflow-hidden">
+                {'logoSrc' in client && client.logoSrc ? (
+                  <img
+                    src={client.logoSrc}
+                    alt={`${name} logo`}
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center">
+                    <Icon size={22} className="text-gold-600" />
+                  </div>
+                )}
               </div>
               <h3 className="font-serif text-xl font-semibold text-navy-900">{name}</h3>
               <p className="text-slate-500 text-sm leading-relaxed mt-3">
                 {sector}
               </p>
             </article>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-12 flex justify-center">
